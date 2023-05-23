@@ -1,8 +1,8 @@
-import React from 'react'
+
 
 const page = () => {
   return (
-    <div>This is home page</div>
+    <div>About</div>
   )
 }
 
