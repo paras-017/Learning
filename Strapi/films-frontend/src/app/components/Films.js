@@ -1,8 +1,10 @@
+'use client'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 
 const Films = async() => {
-    const url = `${process.env.NEXT_PUBLIC_STRAPI_URL}/films/?populate=*`
+  const [pageIndex, setPageIndex] = useState(1)
+    const url = `${process.env.NEXT_PUBLIC_STRAPI_URL}/films/?pagination[page]=${pageIndex}&pagination[pageSize]=4`
     const option = {
       method: 'GET',
       next: { revalidate: 1 } 
