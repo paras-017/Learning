@@ -4,7 +4,8 @@ import React from 'react'
 const Films = async() => {
     const url = `${process.env.NEXT_PUBLIC_STRAPI_URL}/films/?populate=*`
     const option = {
-      method: 'GET'
+      method: 'GET',
+      next: { revalidate: 1 } 
     }
     const res = await fetch(url, option)
     const films = await res.json()
