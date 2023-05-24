@@ -20,6 +20,7 @@ const Nav = () => {
           <li>
             <Link href="/films" className="md:p-2 py-2 block hover:text-purple-400" >Films</Link>
           </li>
+          
         </ul>
       </div>
     </nav>
